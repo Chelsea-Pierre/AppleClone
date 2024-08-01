@@ -1,4 +1,4 @@
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@gsap/react"
 import gsap from "gsap";
 import ModelView from "./ModelView";
 import { useRef, useState } from "react";
@@ -7,6 +7,7 @@ import { yellowImg } from "../utils";
 import * as THREE from 'three';
 import { Canvas } from "@react-three/fiber";
 import { models, sizes } from "../constants";
+import { View } from "@react-three/drei";
 
 const Model = () => {
     const [size, setSize] = useState('small');
@@ -26,7 +27,7 @@ const Model = () => {
 
     // roatations
     const [smallRotation, setSmallRotation] = useState(0);
-    const[largeRotation, setLargeRotation] = useState(0);
+    const [largeRotation, setLargeRotation] = useState(0);
 
     useGSAP(()=>{
        gsap.to('#heading', { y: 0, opacity: 1 }) 
@@ -58,7 +59,6 @@ const Model = () => {
                             item={model}
                             size={size}
                         />
-
                         <Canvas
                             className="w-full h-full"
                             style={{
@@ -71,7 +71,7 @@ const Model = () => {
                             }}
                             eventSource={document.getElementById('root')}
                         >
-                        {/*   <View.Port />   */}
+                            <View.Port />
                         </Canvas>
                     </div>
 
@@ -87,10 +87,11 @@ const Model = () => {
                             </ul>
                             <button className="size-btn-container">
                                 {sizes.map(({ label, value}) => (
-                                    <span key = {label} className="size-btn" style={{
+                                    <span key = {label} className="size-btn" 
+                                    style={{
                                         backgroundColor : size === value ? 'white' : 'transparent',
                                         color: size === value ? 'black' : 'white' }}
-                                        onClick={( )=> setSize(value)}>
+                                        onClick={() => setSize(value)}>
                                         {label}
                                     </span>
                                 ))}
