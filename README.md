@@ -1,8 +1,7 @@
-# React + Vite
+**Video display of titanium Iphone 15 pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Highlight section with animated progress tracking bars and a pause/play button
 
-Currently, two official plugins are available:
+Viewport of a 3Dmodel of the iphone with interactiviy of swapping colors and sizes of the iphone model**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Project Tech Stack: **REACT JS, THREE JS, GSAP, TAILWIND CSS
